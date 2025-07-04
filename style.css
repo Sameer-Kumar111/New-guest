@@ -1,0 +1,553 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(55, 49, 49);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+.main{
+    background-color:#fffb00;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    left: -30px;
+    top: 2px;
+
+}
+
+
+.log{
+    background-color:#00c3ff;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    /* left: -30px;
+    top: 2px; */
+}
+
+.box1{
+    background-color: rgb(0, 0, 0);
+    background-image: url(S\ logo\ cf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45px;
+    width: 45px;
+    border-radius: 10%;
+    position: absolute;
+    animation-name: flo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes flo{
+    75%{
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box2{
+    background-image: url(S\ logo\ cf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45px;
+    width: 45px;
+    border-radius: 10%;
+    position: absolute;
+    animation-name: fly;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fly{
+    75%{
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+nav{
+background: #000;
+padding: 1rem 4rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+/* position: fixed; */
+top: 0;
+height: 80px;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    /* position: relative; */
+}
+
+nav ul li{
+    font-size: 20px;
+}
+ 
+nav ul li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #f44336;
+    margin-right: auto;
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav ul li a:hover{
+    color: #f44336;
+}
+
+.fa-soild{
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+    color: #fff;
+}
+
+.srch{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px ;
+    
+}
+.input{
+
+ width: 200px;
+ padding: 15px;
+ font-weight: 600;
+ transition: 0.8s;
+ background: transparent;
+ background-color:rgb(58, 202, 202);
+ border-radius: 30px;
+ outline: none;
+ border: 2px solid white;
+ color:#fff;
+ font-size: 15px;
+ font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.srch i{
+color: white;
+position: relative;
+left: -35px;
+font-size: 22px;
+
+}
+
+.srch i:hover{
+    color: #f44336;
+}
+
+.srch:hover input{
+    width: 400px;
+}
+
+
+
+/* hero section */
+
+
+.hero-section{
+    height: calc(100vh- 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 100px 4rem; */
+    padding: 30px 30px;
+    gap: 200px;
+
+    
+}
+
+.hero-section .left{
+    width: 50%;
+    
+}
+
+.hero-section .left h1{
+    font-size: 48px;
+}
+
+.hero-section .left p{
+    font-size: 24px;
+    color: #888;
+    padding-block: 20px;
+    padding-bottom: 50px;
+}
+
+.btn{
+    background: #f44336;
+    padding: 12px 30px;
+    border-radius: 10px;   
+    display: inline-block;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #e91101;
+}
+
+
+.hero-section .right{
+      width: 50%;
+}
+
+.cirle{
+/* position: absolute; */
+/* height: auto; */
+width: 500px;
+/* top: 200px; */
+/* bottom: 200px; */
+/* right: 182px; */
+/* border-radius: 50%; */
+overflow: hidden;
+z-index: -1;
+animation-name: circle;
+animation-duration: 15s;
+animation-iteration-count: infinite;
+
+}
+
+@keyframes circle{
+
+100%{
+    transform: rotate(360deg);
+ }
+}
+
+
+.hero-section .right img{
+    width: 100%;
+}
+
+
+
+/* menu section */
+
+#menusection{
+    padding: 100px 4rem;
+}
+
+#menusection h2{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 25px;
+}
+
+.menu-container{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.menu-items{
+    width: 320px;
+    background: #fff;
+    padding: 20px;
+    color: black;
+}
+
+.menu-items img{
+    width: 100%;
+    height: 180px;
+}
+
+.menu-items h4{
+    padding-block: 15px;
+    color: #000;
+}
+
+
+/* trending food section */
+
+#trendsection{
+    padding: 100px 4rem;
+
+}
+
+#trendsection h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.trending-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.trend-items{
+    width: 320px;
+    height: 320px;
+    background: #fff;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.trend-items img{
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+
+}
+
+.trend-items img:hover{
+    transform: scale(1.3);
+}
+
+
+/* Reviews Section */
+
+#review-section{
+    padding: 100px 4rem;
+}
+
+#review-section h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.review-container{
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.reviews{
+    width: 320px;
+    background: #bdb7b7;
+    text-align: center;
+    color: #000;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+ 
+.reviews img{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    padding: 20px;
+
+}
+
+.reviews p{
+    font-size: 13px;
+    padding-top: 13px;
+}
+
+
+/* blogs -Section */
+
+#blogsection{
+    padding: 100px 4rem;
+}
+
+#blogsection h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.blog-container{
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.blog{
+    width: 320px;
+    background: #fff;
+    padding: 15px;
+}
+
+.blog h4{
+    color: #000;
+    padding-block: 15px;
+    font-size: 18px;
+
+}
+
+.blog img{
+    width: 100%;
+    height: 180px;
+
+}
+
+
+/* Footer Section */
+
+footer{
+    padding: 40px 4rem;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  
+
+}
+
+.col{
+    text-align: center;
+    
+
+} 
+
+.col h3{
+font-weight: 700;
+padding-bottom: 20px;
+
+
+}
+
+.col p{
+    font-size: 13px;
+    color: #888;
+    
+
+}
+
+.col-1{
+    width: 300px;
+    
+}
+
+.col li{
+    padding: 4px;
+    color: #888;
+}
+
+.col li i{
+    font-size: 20px;
+    text-align: center;
+}
+
+.col li:hover{
+    color: rgb(55, 152, 249);
+
+}
+
+
+
+/* Media Query */
+
+
+@media (max-width:800px) {
+    
+ nav ul{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.5s;
+ }
+
+ nav ul li:last-child{
+    padding-bottom: 40px;
+}
+
+.menu-icon{
+    display: block;
+}
+
+.srch input{
+    width: 100px;
+}
+
+.hero-section{
+    flex-direction: column;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+
+.hero-section .left, .hero-section .right{
+    width: 100%;
+}
+
+#herosection,#blogsection,#review-section,#trandsection{
+    padding: 40px 2rem;
+}
+
+nav{
+    padding: 1rem 2rem;
+}
+
+.cirle{
+height: auto;
+padding: 50px;
+
+}
+
+
+}
+
+
+
